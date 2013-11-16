@@ -40,6 +40,7 @@ send.addEventListener('click', function(event)
 	if (!websocket || websocket.readyState === 3) 
 	{
 		console.log('The websocket is not connected: FAILED');
+		outputLog("The websocket is not connected: FAILED");
 	}
 	else
 	{
