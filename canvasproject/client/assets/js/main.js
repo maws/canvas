@@ -3,6 +3,19 @@ connect = document.getElementById('connect'),
 websocket,
 output 	= $(".output");
 
+var messages = new Array();
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+context.font = "20px Verdana"
+
+function staticText(message)
+{
+	this.xpos = Math.random()*canvas.width;
+	this.ypos = Math.random()*canvas.height;
+	this.width = message.length*20;
+	this.height = 20;
+	this.message = message;
+};
 
 // Event handler creates websocket conection on button click
 connect.addEventListener('click', function(event)
@@ -21,6 +34,8 @@ connect.addEventListener('click', function(event)
 	websocket.onmessage = function(event)
 	{
 		console.log('Receiving message: ' + event.data);
+		var text = new staticText(event.data);
+		context.fillText(text.message, text.xpos, text.ypos);
 		outputLog("Server: " + event.data);
 	}
 
