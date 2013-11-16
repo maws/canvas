@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/main_style.css">
+</head>
+<body>
+
+<div id="container">
+	<div class="wrapper">
+
+		<h4>Network: </h4>
+		<input id="url" value="ws://localhost:1337" />
+		<button id="connect">Connect</button>
+		<button id="disconnect">Disconnect</button>
+		<input id="message" />
+		<button id="send">Send message</button>
+
+		<canvas id="canvas" width="670" height="400"></canvas>
+
+		<h4>Console: </h4>
+		<div class="output"></div>
+	</div>
+</div>
+
+<!-- Page ends here -->
+
+<script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script> <!-- Make sure to include jquery before main -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
