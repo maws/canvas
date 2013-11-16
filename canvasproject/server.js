@@ -36,7 +36,7 @@ wsServer = new WebSocketServer(
 	autoAcceptConnections: false
 });
 
-//Check client origin (whitelisting)
+//Check client origin (whitelisting) test pull requests
 function originIsAllowed(origin)
 {
 	if(origin === 'http://localhost' || origin === 'null')
